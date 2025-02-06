@@ -75,6 +75,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataContext\AppDbContext.cs" />
+    <Compile Include="DataContext\Match.cs" />
+    <Compile Include="DataContext\Player.cs" />
+    <Compile Include="DataContext\Score.cs" />
+    <Compile Include="DataContext\Team.cs" />
     <Compile Include="UserControlApp\Match.xaml.cs">
       <DependentUpon>Match.xaml</DependentUpon>
     </Compile>

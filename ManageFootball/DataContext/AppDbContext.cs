@@ -9,8 +9,12 @@ namespace ManageFootball.DataContext
 {
     public class AppDbContext:DbContext
     {
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Match> Matchs { get; set; }
+        public DbSet<Score> Scores { get; set; }
         public AppDbContext() : base("name=DefaultConnection")
         {
         }
+
     }
 }
