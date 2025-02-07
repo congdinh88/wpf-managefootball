@@ -8,15 +8,20 @@ using System.Threading.Tasks;
 
 namespace ManageFootball.DataContext
 {
-    [Table("Scores")]
     public class Score
     {
-        [Key] public int id {  get; set; }
-        public int score { get; set; }
-        public string Match_Code { get; set; }
+        public int Id {  get; set; }
+
+        //Ngoại khóa tới Match
+        public string MatchCode { get; set; }
         public virtual Match Match { get; set; }
-        public int Team_id {  get; set; }
+
+        //Ngoại khóa tới Team
+        public int TeamId {  get; set; }
         public virtual Team Team { get; set; }
+
+        public int Sco { get; set; }
+
 
     }
 }

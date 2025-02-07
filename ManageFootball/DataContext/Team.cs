@@ -8,11 +8,22 @@ using System.Threading.Tasks;
 
 namespace ManageFootball.DataContext
 {
-    [Table("Teams")]
     public class Team
     {
-        [Key] public int Id { get; set; }
+        public int Id { get; set; }
         public string Teams { get; set; }
+
+
+        //Danh sách tới Match
+        public virtual ICollection<Match> Matches1 { get; set; }
+        public virtual ICollection <Match> Matches2 { get; set; }
+
+        //Danh sách tới Player
+        public virtual ICollection<Player> Players { get; set; }
+
+        //Danh sách tới Score
+        public virtual ICollection<Score> Scores { get; set; }
         
     }
+
 }
