@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,28 @@ namespace ManageFootball.DataContext
 
         public int Sco { get; set; }
 
+
+    }
+
+    public class ScoreConfig : EntityTypeConfiguration<Score>
+    {
+        public ScoreConfig()
+        {
+            ToTable("Scores");
+            HasKey(t => t.Id);
+            Property(t => t.Id)
+            .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
+            HasRequired(m => m.Match)
+            .WithMany(t => t.Scores)
+            .HasForeignKey(m => m.MatchCode)
+            .WillCascadeOnDelete(false);
+
+            HasRequired(m => m.Team)
+            .WithMany(t => t.Scores)
+            .HasForeignKey(m => m.TeamId)
+            .WillCascadeOnDelete(false);
+        }
 
     }
 }

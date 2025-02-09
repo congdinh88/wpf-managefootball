@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ManageFootball.DataContext
 {
-    
     public class Match
     {
         public string Code {  get; set; }
@@ -26,5 +26,23 @@ namespace ManageFootball.DataContext
         //Danh sách tới Score
         public virtual ICollection<Score> Scores { get; set; }
 
+    }
+    public class MatchConfig: EntityTypeConfiguration<Match>
+    {
+        public MatchConfig()
+        {
+            ToTable("Matches");
+            HasKey(t => t.Code);
+
+            HasRequired(m => m.Team1)
+            .WithMany(t => t.Matches1)
+            .HasForeignKey(m => m.TeamId1)
+            .WillCascadeOnDelete(false);
+
+            HasRequired(m => m.Team2)
+            .WithMany(t => t.Matches2)
+            .HasForeignKey(m => m.TeamId2)
+            .WillCascadeOnDelete(false);
+        }
     }
 }

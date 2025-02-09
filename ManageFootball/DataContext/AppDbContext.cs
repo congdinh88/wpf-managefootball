@@ -20,59 +20,10 @@ namespace ManageFootball.DataContext
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //Cấu hình bảng Team
-            modelBuilder.Entity<Team>()
-                .HasKey(t => t.Id);
-            modelBuilder.Entity<Team>()
-                .Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
-            //Cấu hình bảng Match
-            modelBuilder.Entity<Match>()
-                .HasKey(t => t.Code);
-            //Thiết lập mối quan hệ với bảng Team
-            modelBuilder.Entity<Match>()
-                .HasRequired(m => m.Team1)
-                .WithMany(t => t.Matches1)
-                .HasForeignKey(m => m.TeamId1)
-                .WillCascadeOnDelete(false);
-            modelBuilder.Entity<Match>()
-                .HasRequired(m => m.Team2)
-                .WithMany(t => t.Matches2)
-                .HasForeignKey(m => m.TeamId2)
-                .WillCascadeOnDelete(false);
-
-            // Cấu hình bảng Player
-            modelBuilder.Entity<Player>()
-                .HasKey(t => t.Id);
-            modelBuilder.Entity<Player>()
-                .Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            // Thiết lập mối quan hệ với bảng Team
-            modelBuilder.Entity<Player>()
-                .HasRequired(t => t.Team)
-                .WithMany(m => m.Players)
-                .HasForeignKey(m => m.TeamId)
-                .WillCascadeOnDelete(false);
-
-            // Cấu hình bảng Score
-            modelBuilder.Entity<Score>()
-                .HasKey(t => t.Id);
-            modelBuilder.Entity<Score>()
-                .Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            // Thiết lập mối quan hệ với bảng Match
-            modelBuilder.Entity<Score>()
-                .HasRequired(t => t.Match)
-                .WithMany(m => m.Scores)
-                .HasForeignKey(m => m.MatchCode)
-                .WillCascadeOnDelete (false);
-            // Thiết lâp mối quan hệ với bảng Team
-            modelBuilder.Entity<Score>()
-                .HasRequired(t => t.Team)
-                .WithMany(m => m.Scores)
-                .HasForeignKey(m => m.Team)
-                .WillCascadeOnDelete(false);
+            modelBuilder.Configurations.Add(new TeamConfig());
+            modelBuilder.Configurations.Add(new MatchConfig());
+            modelBuilder.Configurations.Add(new PlayerConfig());
+            modelBuilder.Configurations.Add(new ScoreConfig());
             
             base.OnModelCreating(modelBuilder);
         }
