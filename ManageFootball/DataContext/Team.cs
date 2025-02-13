@@ -24,6 +24,8 @@ namespace ManageFootball.DataContext
 
         //Danh sách tới Score
         public virtual ICollection<Score> Scores { get; set; }
+
+        public virtual ICollection<Stats> Stats { get; set; }
         
     }
 

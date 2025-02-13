@@ -18,7 +18,9 @@ namespace ManageFootball.DataContext
         //Ngoại khóa tới Team
         public int TeamId {  get; set; }
         public virtual Team Team { get; set; }
-        
+
+        public virtual ICollection<Stats> Stats { get; set; }
+
     }
     public class PlayerConfig : EntityTypeConfiguration<Player>
     {

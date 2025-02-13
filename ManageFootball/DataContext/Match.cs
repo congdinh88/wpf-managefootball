@@ -13,7 +13,7 @@ namespace ManageFootball.DataContext
     {
         public string Code {  get; set; }
         public DateTime Time { get; set; }
-        public string Add {  get; set; }
+        public string Addresse {  get; set; }
 
         //Ngoại khóa tới Team1 
         public int TeamId1 {  get; set; }
@@ -25,6 +25,8 @@ namespace ManageFootball.DataContext
 
         //Danh sách tới Score
         public virtual ICollection<Score> Scores { get; set; }
+
+        public virtual ICollection<Stats> Stats { get; set; }
 
     }
     public class MatchConfig: EntityTypeConfiguration<Match>
