@@ -76,27 +76,20 @@
     </ApplicationDefinition>
     <Compile Include="DataContext\AppDbContext.cs" />
     <Compile Include="DataContext\Match.cs" />
+    <Compile Include="Migrations\202502140911187_InitialCreate.cs" />
+    <Compile Include="Migrations\202502140911187_InitialCreate.Designer.cs">
+      <DependentUpon>202502140911187_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\MatchModel.cs" />
     <Compile Include="DataContext\Player.cs" />
     <Compile Include="DataContext\Score.cs" />
     <Compile Include="DataContext\Stats.cs" />
     <Compile Include="DataContext\Team.cs" />
-    <Compile Include="Migrations\202502081540050_InitialCreate.cs" />
-    <Compile Include="Migrations\202502081540050_InitialCreate.Designer.cs">
-      <DependentUpon>202502081540050_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202502130332066_Update1.cs" />
-    <Compile Include="Migrations\202502130332066_Update1.Designer.cs">
-      <DependentUpon>202502130332066_Update1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202502130336373_Update11.cs" />
-    <Compile Include="Migrations\202502130336373_Update11.Designer.cs">
-      <DependentUpon>202502130336373_Update11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202502130406543_Update3.cs" />
-    <Compile Include="Migrations\202502130406543_Update3.Designer.cs">
-      <DependentUpon>202502130406543_Update3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\PlayerModel.cs" />
+    <Compile Include="Models\ScoreModel.cs" />
+    <Compile Include="Models\StatsModel.cs" />
+    <Compile Include="Models\TeamModel.cs" />
     <Compile Include="UserControlApp\Match.xaml.cs">
       <DependentUpon>Match.xaml</DependentUpon>
     </Compile>
@@ -131,17 +124,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202502081540050_InitialCreate.resx">
-      <DependentUpon>202502081540050_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202502130332066_Update1.resx">
-      <DependentUpon>202502130332066_Update1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202502130336373_Update11.resx">
-      <DependentUpon>202502130336373_Update11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202502130406543_Update3.resx">
-      <DependentUpon>202502130406543_Update3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202502140911187_InitialCreate.resx">
+      <DependentUpon>202502140911187_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

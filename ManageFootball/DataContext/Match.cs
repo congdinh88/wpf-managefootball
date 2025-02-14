@@ -25,8 +25,9 @@ namespace ManageFootball.DataContext
 
         //Danh sách tới Score
         public virtual ICollection<Score> Scores { get; set; }
-
         public virtual ICollection<Stats> Stats { get; set; }
+
+        
 
     }
     public class MatchConfig: EntityTypeConfiguration<Match>
@@ -35,6 +36,7 @@ namespace ManageFootball.DataContext
         {
             ToTable("Matches");
             HasKey(t => t.Code);
+            
 
             HasRequired(m => m.Team1)
             .WithMany(t => t.Matches1)

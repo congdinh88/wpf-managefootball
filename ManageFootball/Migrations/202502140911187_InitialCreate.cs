@@ -13,7 +13,7 @@
                     {
                         Code = c.String(nullable: false, maxLength: 128),
                         Time = c.DateTime(nullable: false),
-                        Add = c.String(),
+                        Addresse = c.String(),
                         TeamId1 = c.Int(nullable: false),
                         TeamId2 = c.Int(nullable: false),
                     })
@@ -31,6 +31,8 @@
                         MatchCode = c.String(nullable: false, maxLength: 128),
                         TeamId = c.Int(nullable: false),
                         Sco = c.Int(nullable: false),
+                        Criteria2 = c.Boolean(),
+                        Criteria3 = c.Boolean(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Matches", t => t.MatchCode)
@@ -60,6 +62,27 @@
                 .ForeignKey("dbo.Teams", t => t.TeamId)
                 .Index(t => t.TeamId);
             
+            CreateTable(
+                "dbo.Stats",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        MatchCode = c.String(nullable: false, maxLength: 128),
+                        TeamId = c.Int(nullable: false),
+                        PlayerId = c.Int(nullable: false),
+                        YellowCard = c.Boolean(),
+                        RedCard = c.Boolean(),
+                        Goals = c.Boolean(),
+                        Time = c.String(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Matches", t => t.MatchCode)
+                .ForeignKey("dbo.Players", t => t.PlayerId)
+                .ForeignKey("dbo.Teams", t => t.TeamId)
+                .Index(t => t.MatchCode)
+                .Index(t => t.TeamId)
+                .Index(t => t.PlayerId);
+            
         }
         
         public override void Down()
@@ -68,12 +91,19 @@
             DropForeignKey("dbo.Matches", "TeamId1", "dbo.Teams");
             DropForeignKey("dbo.Scores", "TeamId", "dbo.Teams");
             DropForeignKey("dbo.Players", "TeamId", "dbo.Teams");
+            DropForeignKey("dbo.Stats", "TeamId", "dbo.Teams");
+            DropForeignKey("dbo.Stats", "PlayerId", "dbo.Players");
+            DropForeignKey("dbo.Stats", "MatchCode", "dbo.Matches");
             DropForeignKey("dbo.Scores", "MatchCode", "dbo.Matches");
+            DropIndex("dbo.Stats", new[] { "PlayerId" });
+            DropIndex("dbo.Stats", new[] { "TeamId" });
+            DropIndex("dbo.Stats", new[] { "MatchCode" });
             DropIndex("dbo.Players", new[] { "TeamId" });
             DropIndex("dbo.Scores", new[] { "TeamId" });
             DropIndex("dbo.Scores", new[] { "MatchCode" });
             DropIndex("dbo.Matches", new[] { "TeamId2" });
             DropIndex("dbo.Matches", new[] { "TeamId1" });
+            DropTable("dbo.Stats");
             DropTable("dbo.Players");
             DropTable("dbo.Teams");
             DropTable("dbo.Scores");

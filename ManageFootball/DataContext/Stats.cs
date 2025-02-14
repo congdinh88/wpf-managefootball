@@ -37,8 +37,6 @@ namespace ManageFootball.DataContext
             .IsOptional();
             Property(t => t.RedCard)
             .IsOptional();
-            Property(t => t.YellowCard)
-            .IsOptional();
             Property(t => t.Goals)
             .IsOptional();
 

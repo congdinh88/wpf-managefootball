@@ -22,8 +22,8 @@ namespace ManageFootball.DataContext
         public virtual Team Team { get; set; }
 
         public int Sco { get; set; }
-
-
+        public bool? Criteria2 { get; set; }
+        public bool? Criteria3 { get; set; }
     }
 
     public class ScoreConfig : EntityTypeConfiguration<Score>
@@ -34,6 +34,10 @@ namespace ManageFootball.DataContext
             HasKey(t => t.Id);
             Property(t => t.Id)
             .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(t => t.Criteria2)
+            .IsOptional();
+            Property(t => t.Criteria3)
+            .IsOptional();
 
             HasRequired(m => m.Match)
             .WithMany(t => t.Scores)
