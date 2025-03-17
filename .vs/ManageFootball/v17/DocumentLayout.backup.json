@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\setup\\PortableGit\\ManageFootball\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FCE087BA-BCE3-4BAF-B6F0-4BF76D32D924}|ManageFootball\\ManageFootball.csproj|d:\\setup\\portablegit\\managefootball\\managefootball\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FCE087BA-BCE3-4BAF-B6F0-4BF76D32D924}|ManageFootball\\ManageFootball.csproj|solutionrelative:managefootball\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCE087BA-BCE3-4BAF-B6F0-4BF76D32D924}|ManageFootball\\ManageFootball.csproj|d:\\setup\\portablegit\\managefootball\\managefootball\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FCE087BA-BCE3-4BAF-B6F0-4BF76D32D924}|ManageFootball\\ManageFootball.csproj|solutionrelative:managefootball\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\setup\\PortableGit\\ManageFootball\\ManageFootball\\App.xaml",
+              "RelativeDocumentMoniker": "ManageFootball\\App.xaml",
+              "ToolTip": "D:\\setup\\PortableGit\\ManageFootball\\ManageFootball\\App.xaml",
+              "RelativeToolTip": "ManageFootball\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-17T07:54:14.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\setup\\PortableGit\\ManageFootball\\ManageFootball\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ManageFootball\\MainWindow.xaml",
+              "ToolTip": "D:\\setup\\PortableGit\\ManageFootball\\ManageFootball\\MainWindow.xaml",
+              "RelativeToolTip": "ManageFootball\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-17T06:19:50.5Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ManageFootball/1.0.0": {
+        "dependencies": {
+          "YonoControl": "1.0.0",
+          "YonoThemes": "1.0.0"
+        },
+        "runtime": {
+          "ManageFootball.dll": {}
+        }
+      },
+      "YonoControl/1.0.0": {
+        "dependencies": {
+          "YonoThemes": "1.0.0"
+        },
+        "runtime": {
+          "YonoControl.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "YonoThemes/1.0.0": {
+        "runtime": {
+          "YonoThemes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ManageFootball/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "YonoControl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "YonoThemes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
