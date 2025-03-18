@@ -25,3 +25,4 @@ D:\setup\PortableGit\ManageFootball\ManageFootball\obj\Debug\net8.0-windows\ref\
 D:\setup\PortableGit\ManageFootball\ManageFootball\bin\Debug\net8.0-windows\YonoThemes.dll
 D:\setup\PortableGit\ManageFootball\ManageFootball\bin\Debug\net8.0-windows\YonoThemes.pdb
 D:\setup\PortableGit\ManageFootball\ManageFootball\obj\Debug\net8.0-windows\App.baml
+D:\setup\PortableGit\ManageFootball\ManageFootball\obj\Debug\net8.0-windows\ManageFootball.sourcelink.json

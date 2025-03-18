@@ -31,29 +31,19 @@
                 Grid.Column="0">
                 <ListView
                     x:Name="Menubar">
-                    <ListViewItem Content="A"/>
-                    <ListViewItem Content="A"/>
-                    <ListViewItem Content="A"/>
-                    <ListViewItem Content="A"/>
+                    <ListViewItem Content="Match"/>
+                    <ListViewItem Content="Ranks"/>
+                    <ListViewItem Content="Rules"/>
+                    <ListViewItem Content="Statistic"/>
                 </ListView>
-                <Expander 
-                        Width="200"
-                        Header="B" 
-                        Style="{StaticResource ExpanderSt}">
-                        <ListView>
-                            <ListViewItem Content="C"/>
-                            <ListViewItem Content="C"/>
-                            <ListViewItem Content="C"/>
-                        </ListView>
-                    </Expander>
             </StackPanel>
             <GridSplitter 
                 Grid.Column="1"
                 Background="{StaticResource FrameBrush}"
                 HorizontalAlignment="Stretch"/>
-            <Frame Grid.Column="2">
-
-            </Frame>
+            <Grid Grid.Column="2">
+                <uc:GoalTable/>
+            </Grid>
         </Grid>
         <Grid 
             Grid.Row="2"
